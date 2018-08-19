@@ -1,0 +1,46 @@
+header.header
+	.container.header__container
+		a.logo(href="/")
+			img(src=img + "logo.png", alt="").logo__img
+			| Extra
+			span.logo__bold ordinary
+		button.menu-toggler.collapsed.js-toggle-menu
+			span.menu-toggler__bar
+		.menu-wrap.js-menu-showing
+			ul.menu
+				li.menu__item
+					button(type="button").menu__btn.js-toggle-share Share
+					ul.share.js-share-showing
+						li.share__item.share__item--1
+							a.share__link(href="#")
+								span.share__link-part.share__link-part--icon
+									i.icon.icon-fb
+								span.share__link-part.share__link-part--name Facebook
+						li.share__item.share__item--2
+							a.share__link(href="#")
+								span.share__link-part.share__link-part--icon
+									i.icon.icon-twitter
+								span.share__link-part.share__link-part--name Twitter
+						li.share__item.share__item--3
+							a.share__link(href="#")
+								span.share__link-part.share__link-part--icon
+									i.icon.icon-google-plus
+								span.share__link-part.share__link-part--name Google+
+						li.share__item.share__item--4
+							a.share__link(href="#")
+								span.share__link-part.share__link-part--icon
+									i.icon.icon-pinterest
+								span.share__link-part.share__link-part--name Pinterest
+				li.menu__item
+					a(href="#").menu__btn
+						span.hidden-sm-up Search
+						i.icon.icon-search.hidden-xs
+				li.menu__item
+					a(href="#").menu__btn
+						span.hidden-sm-up Login
+						i.icon.icon-user.hidden-xs
+
+			include ../sidebar/sidebar
+
+
+

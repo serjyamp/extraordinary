@@ -1,0 +1,10 @@
+.sidebar
+	ul.sidebar__menu
+		- var sidebarItems = ["graphic", "music", "photography", "cinema", "business", "travel", "fashion", "more", "settings"];
+		- var sidebarIcons = ["palette", "note", "camera", "play", "suitcase", "airplane", "bag", "plus", "cog"];
+		each val, index in sidebarItems
+			li(class="sidebar__menu-item sidebar__menu-item--" + val)
+				a(href="#").sidebar__menu-link
+					span.sidebar__menu-icon-wrap
+						i(class="icon icon-" + sidebarIcons[index])
+					span.sidebar__menu-name= val

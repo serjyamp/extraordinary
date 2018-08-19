@@ -1,0 +1,8 @@
+// all styles
+@import 'includes/normalize/normalize/_import-now';
+@import 'includes/var';
+@import 'includes/fonts';
+
+@import '../markup/blocks/header/header';
+@import '../markup/blocks/sidebar/sidebar';
+@import 'includes/main';

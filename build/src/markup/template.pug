@@ -1,0 +1,28 @@
+//- template page
+- var css = "css/";
+- var js = "js/";
+- var vendor = "vendor/";
+- var img = "img/";
+
+doctype html
+html(lang='en')
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		
+		title
+			| Extraordinary - 
+			| 
+			block title
+		
+		link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,700', rel='stylesheet')
+		link(rel="stylesheet", href=css + "main.min.css")
+	body
+		include blocks/header/header
+
+		main.main
+			block content
+
+		script(src=vendor + "jquery.min.js")
+		script(src=vendor + "masonry.pkgd.min.js")
+		script(src=js + "js.min.js")

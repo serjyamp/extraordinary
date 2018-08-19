@@ -1,0 +1,148 @@
+.sidebar{
+	padding: 18px 20px;
+	@include min(576){
+		width: 70px;
+		padding: 0;
+		border-right: solid 1px #e7e7e7;
+	}
+	&__menu{
+		height: 100%;
+		position: relative;
+	}
+	&__menu-link{
+		@extend .share__link;
+		position: relative;
+		border: none;
+		i{
+			font-size: 12px;
+		}
+		@include min(576){
+			justify-content: center;
+			height: 100%;
+			transition: none;
+			&:hover{
+				opacity: 1;
+				color: #FFF;
+				i{
+					color: #FFF;
+					position: relative;
+					z-index: 10;
+				}
+				.sidebar__menu-name{
+					left: 0;
+					padding-left: 65px;
+				}
+			}
+		}
+	}
+	&__menu-name{
+		@include min(576){
+			box-shadow: 0 2px 4px rgba(23, 23, 23, 0.17);
+			background-color: #5692b1;
+			position: absolute;
+			left: -300px;
+			display: flex;
+			height: 100%;
+			align-items: center;
+			padding-left: 55px;
+			transition: padding-left .2s ease-out;
+			background: #5692B1;
+			padding-right: 24px;
+		}
+	}
+	&__menu-item{
+		margin-bottom: 8px;
+		&--settings{
+			margin-top: 20px;
+			border-bottom: none !important;
+			@include min-h(699){
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				border-top: solid 1px #e7e7e7;
+			}
+		}
+		@include min(576){
+			border-bottom: solid 1px #e7e7e7;
+			margin-bottom: 0;
+			width: 100%;
+			height: 11.11%;
+			max-height: 69px;
+			i{
+				line-height: normal;
+			}
+			&--graphic{
+				i{
+					font-size: 16px;
+					color: #14b9d6;
+				}
+			}
+			&--music{
+				i{
+					font-size: 18px;
+					color: #e76049;
+				}
+			}
+			&--photography{
+				i{
+					font-size: 17px;
+					color: #2eb398;
+				}
+			}
+			&--cinema{
+				i{
+					font-size: 14px;
+					color: #90899c;
+				}
+			}
+			&--business{
+				i{
+					font-size: 18px;
+					color: #5692B1;
+				}
+			}
+			&--travel{
+				i{
+					font-size: 19px;
+					color: #f9b704;
+				}
+			}
+			&--fashion{
+				i{
+					font-size: 17px;
+					color: #dd1787;
+				}
+			}
+			&--more{
+				i{
+					font-size: 22px;
+					color: #e76049;
+				}
+			}
+			&--settings{
+				margin-top: 0;
+				i{
+					font-size: 18px;
+					color: #585858;
+				}
+			}
+		}
+	}
+	&__menu-icon-wrap{
+		display: block;
+		width: 24px;
+		@include min(576){
+			width: auto;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+	@include min(576){
+		position: fixed;
+		left: 0;
+		top: 78px;
+		background: #FBFBFB;
+		height: calc(100vh - 78px);
+	}
+}

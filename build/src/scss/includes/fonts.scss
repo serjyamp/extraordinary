@@ -1,0 +1,157 @@
+// paths to fonts
+$fonts: '../fonts/';
+
+// common
+$font-montserrat: 'Montserrat', sans-serif;
+$font-opensans: 'Open Sans', sans-serif;
+
+// icomoon
+$icomoon-font-family: "icomoon" !default;
+
+$icon-airplane: "\e900";
+$icon-arrow: "\e901";
+$icon-bag: "\e902";
+$icon-calendar: "\e903";
+$icon-camera: "\e904";
+$icon-close: "\e905";
+$icon-cog: "\e906";
+$icon-comment: "\e907";
+$icon-fb: "\e908";
+$icon-google-plus: "\e909";
+$icon-greater: "\e90a";
+$icon-note: "\e90b";
+$icon-palette: "\e90c";
+$icon-pinterest: "\e90d";
+$icon-play: "\e90e";
+$icon-plus: "\e90f";
+$icon-search: "\e910";
+$icon-suitcase: "\e911";
+$icon-twitter: "\e912";
+$icon-user: "\e913";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:
+    url('#{$fonts}/#{$icomoon-font-family}.ttf?3anron') format('truetype'),
+    url('#{$fonts}/#{$icomoon-font-family}.woff?3anron') format('woff'),
+    url('#{$fonts}/#{$icomoon-font-family}.svg?3anron##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-airplane {
+  &:before {
+    content: $icon-airplane; 
+  }
+}
+.icon-arrow {
+  &:before {
+    content: $icon-arrow; 
+  }
+}
+.icon-bag {
+  &:before {
+    content: $icon-bag; 
+  }
+}
+.icon-calendar {
+  &:before {
+    content: $icon-calendar; 
+  }
+}
+.icon-camera {
+  &:before {
+    content: $icon-camera; 
+  }
+}
+.icon-close {
+  &:before {
+    content: $icon-close; 
+  }
+}
+.icon-cog {
+  &:before {
+    content: $icon-cog; 
+  }
+}
+.icon-comment {
+  &:before {
+    content: $icon-comment; 
+  }
+}
+.icon-fb {
+  &:before {
+    content: $icon-fb; 
+  }
+}
+.icon-google-plus {
+  &:before {
+    content: $icon-google-plus; 
+  }
+}
+.icon-greater {
+  &:before {
+    content: $icon-greater; 
+  }
+}
+.icon-note {
+  &:before {
+    content: $icon-note; 
+  }
+}
+.icon-palette {
+  &:before {
+    content: $icon-palette; 
+  }
+}
+.icon-pinterest {
+  &:before {
+    content: $icon-pinterest; 
+  }
+}
+.icon-play {
+  &:before {
+    content: $icon-play; 
+  }
+}
+.icon-plus {
+  &:before {
+    content: $icon-plus; 
+  }
+}
+.icon-search {
+  &:before {
+    content: $icon-search; 
+  }
+}
+.icon-suitcase {
+  &:before {
+    content: $icon-suitcase; 
+  }
+}
+.icon-twitter {
+  &:before {
+    content: $icon-twitter; 
+  }
+}
+.icon-user {
+  &:before {
+    content: $icon-user; 
+  }
+}
+// icomoon --/
