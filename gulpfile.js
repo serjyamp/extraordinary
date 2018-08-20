@@ -75,6 +75,9 @@ gulp.task('vendor', function() {
     gulp.src(nm + "masonry-layout/dist/masonry.pkgd.min.js")
         .pipe(gulp.dest(pathToSave))
 
+    gulp.src(nm + "imagesloaded/imagesloaded.pkgd.min.js")
+        .pipe(gulp.dest(pathToSave))
+
     gulp.src(nm + "normalize-scss/sass/**/*")
         .pipe(gulp.dest("build/src/scss/includes/normalize"))
 
@@ -109,7 +112,6 @@ gulp.task('default', [
     'fonts',
     'img',
     'js',
-    'vendor',
     'pug',
     'css',
     'connect',
