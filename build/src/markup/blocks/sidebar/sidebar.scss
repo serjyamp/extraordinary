@@ -1,5 +1,5 @@
 .sidebar{
-	padding: 18px 20px;
+	padding: 18px 30px;
 	@include min(576){
 		width: 70px;
 		padding: 0;
@@ -8,13 +8,14 @@
 	&__menu{
 		height: 100%;
 		position: relative;
+		list-style: none;
 	}
 	&__menu-link{
 		@extend .share__link;
 		position: relative;
 		border: none;
 		i{
-			font-size: 12px;
+			font-size: 14px;
 		}
 		@include min(576){
 			justify-content: center;
@@ -48,6 +49,9 @@
 			transition: padding-left .2s ease-out;
 			background: #5692B1;
 			padding-right: 24px;
+			@include IE11{
+				width: 200px;
+			}
 		}
 	}
 	&__menu-item{
@@ -55,7 +59,7 @@
 		&--settings{
 			margin-top: 20px;
 			border-bottom: none !important;
-			@include min-h(699){
+			@include min-w-min-h(576, 699){
 				position: absolute;
 				left: 0;
 				bottom: 0;
@@ -130,7 +134,7 @@
 	}
 	&__menu-icon-wrap{
 		display: block;
-		width: 24px;
+		width: 30px;
 		@include min(576){
 			width: auto;
 			display: flex;

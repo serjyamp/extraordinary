@@ -5,8 +5,9 @@ var gulp = require('gulp'),
     opn = require('opn'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
+    order = require("gulp-order"),
     pug = require('gulp-pug'),
-    prettify = require('gulp-html-prettify'),
+    htmlmin = require('gulp-htmlmin'),
     rename = require('gulp-rename'),
     csso = require('gulp-csso'),
     concat = require('gulp-concat'),
@@ -35,11 +36,7 @@ gulp.task('pug', function() {
 
     gulp.src('build/src/markup/pages/*.pug')
         .pipe(pug())
-        .pipe(prettify({
-            unformatted: [],
-            indent_char: '\t',
-            indent_size: 1
-        }))
+        .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest('build/dest/'))
         .pipe(connect.reload());
 });
@@ -55,19 +52,26 @@ gulp.task('img', function() {
 });
 
 gulp.task('js', function() {
-    gulp.src("build/src/js-no-concat/**/*.*")
-        .pipe(gulp.dest("build/dest/js"))
-    gulp.src(['build/src/**/*.js', '!build/src/js-no-concat/**/*'])
-        .pipe(concat('js.min.js'))
+    gulp.src('build/src/**/*.js')
+        .pipe(order([
+            'vendor/jquery.min.js'
+        ]))
+        .pipe(concat('bundle.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('build/dest/js'))
+        .pipe(connect.reload());
+});
+
+gulp.task('json', function() {
+    gulp.src('build/src/**/*.json')
+        .pipe(gulp.dest('build/dest'))
         .pipe(connect.reload());
 });
 
 gulp.task('vendor', function() {
     // yarn files
     var nm = "node_modules/";
-    var pathToSave = "build/dest/vendor/";
+    var pathToSave = "build/src/vendor/";
 
     gulp.src(nm + "jquery/dist/jquery.min.js")
         .pipe(gulp.dest(pathToSave))
@@ -106,12 +110,14 @@ gulp.task('watch', function() {
     gulp.watch(['build/src/**/*.pug'], ['pug']);
     gulp.watch(['build/src/**/*.scss'], ['css']);
     gulp.watch(['build/src/**/*.js'], ['js']);
+    gulp.watch(['build/src/**/*.json'], ['json']);
 });
 
 gulp.task('default', [
     'fonts',
     'img',
     'js',
+    'json',
     'pug',
     'css',
     'connect',

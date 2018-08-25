@@ -11,8 +11,8 @@
     }
 }
 
-@mixin min-h($size) {
-    @media (min-height: $size + 'px') {
+@mixin min-w-min-h($w, $h) {
+    @media (min-width: $w + 'px') and (min-height: $h + 'px') {
         @content;
     }
 }
@@ -42,6 +42,12 @@
         @content;
     }
     &:-ms-input-placeholder {
+        @content;
+    }
+}
+
+@mixin IE11 {
+    @media all and (-ms-high-contrast: none) {
         @content;
     }
 }

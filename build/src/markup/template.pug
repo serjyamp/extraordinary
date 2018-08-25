@@ -1,7 +1,6 @@
 //- template page
 - var css = "css/";
 - var js = "js/";
-- var vendor = "vendor/";
 - var img = "img/";
 
 doctype html
@@ -23,7 +22,4 @@ html(lang='en')
 		main.main
 			block content
 
-		script(src=vendor + "jquery.min.js")
-		script(src=vendor + "masonry.pkgd.min.js")
-		script(src=vendor + "imagesloaded.pkgd.min.js")
-		script(src=js + "js.min.js")
+		script(src=js + "bundle.min.js")

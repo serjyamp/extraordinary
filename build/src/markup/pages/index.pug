@@ -7,7 +7,7 @@ block content
 	.grid.js-init-masonry
 		.grid__item
 			.box.box--border-green
-				a(href="").box__img
+				a(href="" data-news-item-id="1").box__img.js-open-this-news-item
 					img(src=img + "item-1.jpg", alt="")
 					.box__more
 						.box__more-btn
@@ -23,12 +23,12 @@ block content
 							i.icon.icon-comment.box__top-icon
 							span.box__top-text 14 Comments
 					.box__bottom
-						a(href="").box__bottom-heading
+						a(href="" data-news-item-id="1").box__bottom-heading.js-open-this-news-item
 							h2.h2 All sail being set, he now cast loose the life-line, reserved.
 						p.box__bottom-summary Soon all the boats but Starbuck's were dropped; all the boat-sails set all the paddles plying; with rippling swiftness, shooting to leeward; and Ahab heading the onset. A pale, death-glimmer lit up Fedallah's sunken eyes; a hideous motion.
 		.grid__item
 			.box.box--border-orange
-				a(href="").box__img
+				a(href="" data-news-item-id="2").box__img.js-open-this-news-item
 					img(src=img + "item-2.jpg", alt="")
 					.box__more
 						.box__more-btn
@@ -44,12 +44,12 @@ block content
 							i.icon.icon-comment.box__top-icon
 							span.box__top-text 2 Comments
 					.box__bottom
-						a(href="").box__bottom-heading
+						a(href="" data-news-item-id="2").box__bottom-heading.js-open-this-news-item
 							h2.h2 Robin Thicke: Longest Hot 100 Reign This Year
 						p.box__bottom-summary The line originally used in the fishery was of the best hemp, slightly vapoured with tar, not impregnated with it, as in the case of ordinary ropes; for while tar, as ordinarily used, makes the hemp more pliable to the rope-maker, Of late years the Manilla rope has in the American fishery almost entirely superseded hemp as.
 		.grid__item
 			.box.box--border-blue
-				a(href="").box__img
+				a(href="" data-news-item-id="3").box__img.js-open-this-news-item
 					img(src=img + "item-4.jpg", alt="")
 					.box__more
 						.box__more-btn
@@ -65,7 +65,7 @@ block content
 							i.icon.icon-comment.box__top-icon
 							span.box__top-text 6 Comments
 					.box__bottom
-						a(href="").box__bottom-heading
+						a(href="" data-news-item-id="3").box__bottom-heading.js-open-this-news-item
 							h2.h2 A-Rod, A Fraud, And A Waste Of Yankees Money, Public's Time
 						p.box__bottom-summary Enough already.  I can’t take it no more.  Free us from enslavement to all this banter. OK, so my fit of anger this morning is not steroid- induced…though that would be fitting in light of recent discussions. Baseball talk of late has centered upon performance enhancing drugs.  Biogenesis has become the new BALCO.  A-Rod the new Barry Bonds. And all I hear from various media types are questions like.
 		.grid__item
@@ -73,7 +73,7 @@ block content
 				img.banner__img(src=img + "banner.jpg", alt="")
 		.grid__item
 			.box.box--border-grey
-				a(href="").box__img
+				a(href="" data-news-item-id="4").box__img.js-open-this-news-item
 					img(src=img + "item-3.jpg", alt="")
 					.box__more
 						.box__more-btn
@@ -89,12 +89,12 @@ block content
 							i.icon.icon-comment.box__top-icon
 							span.box__top-text 2 Comments
 					.box__bottom
-						a(href="").box__bottom-heading
+						a(href="" data-news-item-id="4").box__bottom-heading.js-open-this-news-item
 							h2.h2 A Strange Brand of Happy
 						p.box__bottom-summary An aimless bachelor loses his job and finds himself chasing the same girl (his new life coach) that his manipulative ex-boss is after as well. The boys are spurred on by a rag tag group of retirees in need of some action.
 		.grid__item
 			.box.box--border-cyan
-				a(href="").box__img
+				a(href="" data-news-item-id="5").box__img.js-open-this-news-item
 					img(src=img + "item-5.jpg", alt="")
 					.box__more
 						.box__more-btn
@@ -110,6 +110,10 @@ block content
 							i.icon.icon-comment.box__top-icon
 							span.box__top-text 2 Comments
 					.box__bottom
-						a(href="").box__bottom-heading
+						a(href="" data-news-item-id="5").box__bottom-heading.js-open-this-news-item
 							h2.h2 The whale-line is only two-thirds of an inch in thickness
 						p.box__bottom-summary At first sight, you would not think it so strong as it really is. By experiment its one and fifty yarns will each suspend a weight of one hundred and twenty pounds; so that the whole rope will bear a strain nearly equal to three tons.
+	.news-wrap.js-toggle-news-popup
+		.preloader
+			.preloader__rotator
+		ul.news.js-render-news-here
