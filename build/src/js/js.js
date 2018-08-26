@@ -49,7 +49,7 @@ $(function() {
     function imagesInPopupLoaded(){
         var popup = $('.js-toggle-news-popup');
         popup.imagesLoaded().always(function() {
-            popup.removeClass('loading').addClass('showed');
+            popup.addClass('showed').removeClass('loading');
         });
     }
 

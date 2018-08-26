@@ -321,20 +321,24 @@ textarea {
     width: 100%;
     overflow: auto;
     opacity: 0;
-    transition: opacity .3s;
+    transition: opacity .5s;
     height: calc(100% - 73px);
     &.loading{
         left: 0;
         opacity: 1;
         .preloader{
-            opacity: 1;
+            animation-name: opacity-in;
+            animation-duration: .2s;
+            animation-delay: .2s;
+            animation-fill-mode: forwards;
         }
     }
     &.showed{
         left: 0;
         opacity: 1;
         .news{
-            opacity: 1;
+            animation: opacity-in .5s;
+            animation-fill-mode: forwards;
         }
     }
     @include min(576){
@@ -377,9 +381,16 @@ textarea {
     transform: rotate(360deg);
   }
 }
+@keyframes opacity-in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 .news{
     opacity: 0;
-    transition: opacity .3s;
     list-style-type: none;
     max-width: 1370px;
     margin: 0 auto;
